@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/Ahaar-Setu/",
+  base: process.env.NODE_ENV === 'production' ? '/Ahaar-Setu/' : '/',
   build: {
     outDir: 'dist',
     sourcemap: true,

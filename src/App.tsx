@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from './components/ui/toaster';
 import { FoodProvider } from './contexts/FoodContext';
 import { PointsProvider } from './contexts/PointsContext';
@@ -20,7 +20,7 @@ const App = () => {
   return (
     <PointsProvider>
       <FoodProvider>
-        <Router basename="/Ahaar-Setu">
+        <Router>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
